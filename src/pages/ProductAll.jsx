@@ -12,7 +12,7 @@ const ProductAll = () => {
     // q라는 키값을 가진 쿼리를 찾아서 서치쿼리 안에넣어주셈 || 없으면 빈 문자열
     let searchQuery = query.get("q") || "";
     // ?뒷부분 제이슨서버 문법 - 쿼리값으로 알아서 찾아옴
-    const url = `http://localhost:3000/products?q=${searchQuery}`;
+    const url = `https://my-json-server.typicode.com/IGYEONGMUN/reactShop/products?q=${searchQuery}`;
     const response = await fetch(url);
     const data = await response.json();
     setProductList(data);
